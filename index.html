@@ -11,13 +11,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css" integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./css/styles.css"/>
 </head>
-<body>
+<body data-body>
     <header>
         <div class="container">
             <div class="header-flex">
             <nav class="header-nav">
                 <a href="./index.html" class="logo link"><span class="web"> Web</span><span></span class="studio">Studio</span></a>
-                <ul class="site-nav list"> 
+                    <ul class="site-nav list"> 
                         <li class="item"><a href="./index.html" class="link current">Студия</a></li>
                         <li class="item"><a href="./portfolio.html" class="link">Портфолио</a></li>
                         <li class="item"><a href="" class="link">Контакты</a></li>
@@ -38,7 +38,7 @@
         <section class="hero section overlay">
             <div class="container">
                 <h1 class="hero-title">Эффективные решения для вашего бизнеса</h1>
-                <button type="button" class="button-primary">Заказать услугу</button>
+                <button data-modal-open type="button" class="button-primary">Заказать услугу</button>
             </div>
            
         </section>
@@ -74,9 +74,9 @@
             <div class="container">
                 <h2 class="section-title">Чем мы занимаемся</h2>
                 <ul class="list item-about">
-                    <li class="item"><img src="./images/specialty/img1.jpg" alt="Разметка сайта" width="370" height="294"></li>
-                    <li class="item"><img src="./images/specialty/img2.jpg" alt="Дизайн страницы для телефона" width="370" height="294"></li>
-                    <li class="item"><img src="./images/specialty/img3.jpg" alt="Цветовая схема" width="370" height="294"></li>
+                    <li class="item"><img src="./images/specialty/img1.jpg" alt="Разметка сайта" width="370" height="294"> <div class="name"><p class="text">Десктопные приложения</p></div></li>
+                    <li class="item"><img src="./images/specialty/img2.jpg" alt="Дизайн страницы для телефона" width="370" height="294"> <div class="name"><p class="text">Мобильные приложения</p></div></li>
+                    <li class="item"><img src="./images/specialty/img3.jpg" alt="Цветовая схема" width="370" height="294"> <div class="name"><p class="text">Дизайнерские решения</p></div> </li>
                 </ul>
             </div>    
         </section>
@@ -344,5 +344,11 @@
                 </ul>
       </div>   
     </footer>   
+
+    <!--modal-->
+    <div data-modal class="backdrop is-hidden">
+      <div class="modal"><batton data-modal-close class="close"><svg class="icon-close" width="11px" height="11px"><use href="./images/icons.svg#icon-close"></use></svg></batton></div>
+    </div>
+<script src="./js/modal.js"></script>
 </body>
 </html>
