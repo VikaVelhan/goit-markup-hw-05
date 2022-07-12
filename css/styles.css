@@ -339,27 +339,30 @@ header {
   display: flex;
 }
 .item-about .item {
-  position: relative;
   margin-right: 30px;
 }
 .item-about .item:last-child {
   margin-right: 0px;
 }
-.item-about .name {
+
+.about-overlay {
+  position: relative;
+}
+
+.item-about .about-position {
   position: absolute;
   bottom: 0px;
   left: 0px;
-
   display: flex;
   align-items: center;
   justify-content: center;
 
   background-color: rgba(47, 48, 58, 0.8);
-  width: 370px;
+  width: 100%;
   height: 70px;
 }
 
-.item-about .text {
+.item-about .text-overlay {
   font-weight: 700;
   text-transform: uppercase;
   line-height: 1.14;
@@ -705,6 +708,8 @@ header {
   background-color: rgba(33, 150, 243, 0.9);
   transition: transform var(--animation);
 }
+
+.card:focus .text,
 .card:hover .text {
   transform: translateY(0%);
 }
